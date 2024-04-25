@@ -79,7 +79,7 @@ public class RegistrationTest {
         waitUntilTheScreenSettles();
         driver.findElement(By.id("name")).sendKeys(newPlayer.name());
         driver.findElement(By.id("password")).sendKeys(newPlayer.password());
-        driver.findElement(By.id("login")).click();
+        driver.findElement(By.cssSelector("#login:not([disabled])")).click();
 
         wait.until(ExpectedConditions.urlToBe("http://localhost:5173/game"));
 
