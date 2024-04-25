@@ -1,12 +1,11 @@
 package com.serenitydojo.wordle.authentication;
 
+import com.serenitydojo.wordle.E2EBase;
 import com.serenitydojo.wordle.testdata.Player;
 import org.junit.jupiter.api.*;
+import org.junit.jupiter.params.ParameterizedTest;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Dimension;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -16,19 +15,7 @@ import java.time.Duration;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.openqa.selenium.support.ui.ExpectedConditions.elementToBeClickable;
 
-public class RegistrationTest {
-    WebDriver driver;
-
-    @BeforeEach
-    void openDriver() {
-        driver = new ChromeDriver();
-        driver.manage().window().setSize(new Dimension(1024, 768));
-    }
-
-    @AfterEach
-    void closeDriver() {
-        driver.quit();
-    }
+public class RegistrationTest extends E2EBase {
 
     @Test
     @DisplayName("User should be able to register from the home page")
