@@ -1,23 +1,10 @@
 package com.serenitydojo.wordle.authentication;
 
+import com.serenitydojo.wordle.E2EBase;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.*;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 
-public class LogInTest {
-
-    WebDriver driver;
-
-    @BeforeEach
-    void openDriver() {
-        driver = new ChromeDriver();
-    }
-
-    @AfterEach
-    void closeDriver() {
-        driver.quit();
-    }
+public class LogInTest extends E2EBase {
 
     @Nested
     @DisplayName("When logging in")
